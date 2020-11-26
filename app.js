@@ -14,6 +14,9 @@
         { text: 'Ramen is my fav food ever', id: 123523 },
         { text: 'Nice Nice Nice!', id: 542328 }
       ];
+
+      console.log(people)
+      console.log(comments)
   
 // Some and Every Checks
 // Array.prototype.some() is at least one person 19 or older?
@@ -32,19 +35,19 @@
             // })
             // console.log(isAdult)
 
-            //FURTHER SIMPLIFIED w/ implicit return
+            //FURTHER SIMPLIFIED w/ implicit return;
             // const  isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19 )
             // console.log(isAdult)
 
 
 // Array.prototype.every() 
 // is everyone 19 or older?
-        // const isAdult = people.every(function(person) {
-        //     const currentYear = (new Date()).getFullYear();
-        //     if(currentYear - person.year >= 19)
-        //         return true;
-        // });
-        // console.log(isAdult)
+        const isAdult = people.every(function(person) {
+            const currentYear = (new Date()).getFullYear();
+            if(currentYear - person.year >= 19)
+                return true;
+        });
+        console.log(isAdult)
   
 
 // Array.prototype.find()
